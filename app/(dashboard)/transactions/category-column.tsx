@@ -5,13 +5,11 @@ import { useOpenTransaction } from "@/features/transactions/hooks/use-open-trans
 
 import { cn } from "@/lib/utils";
 
-type Props = {
-  id: string;
-  category: string | null;
-  categoryId: string | null;
-};
-
-export const CategoryColumn = ({ id, category, categoryId }: Props) => {
+export const CategoryColumn = ({
+  id,
+  category,
+  categoryId,
+}: CategoryColumnProps) => {
   const { onOpen: onOpenCategory } = useOpenCategory();
   const { onOpen: onOpenTransaction } = useOpenTransaction();
 

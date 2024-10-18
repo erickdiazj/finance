@@ -9,19 +9,12 @@ import {
 
 import { TableHeadSelect } from "./table-head-select";
 
-type Props = {
-  headers: string[];
-  body: string[][];
-  selectedColumns: Record<string, string | null>;
-  onTableHeadSelectChange: (columnIndex: number, value: string | null) => void;
-};
-
 export const ImportTable = ({
   headers,
   body,
   selectedColumns,
   onTableHeadSelectChange,
-}: Props) => {
+}: ImportTableProps) => {
   return (
     <div className="rounded-md border overflow-hidden">
       <Table>

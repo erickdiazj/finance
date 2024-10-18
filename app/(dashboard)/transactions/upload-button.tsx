@@ -3,15 +3,10 @@ import { useCSVReader } from "react-papaparse";
 
 import { Button } from "@/components/ui/button";
 
-type Props = {
-  // eslint-disable-next-line
-  onUpload: (results: any) => void;
-};
-
-export const UploadButton = ({ onUpload }: Props) => {
+export const UploadButton = ({ onUpload }: UploadButtonProps) => {
   const { CSVReader } = useCSVReader();
 
-  // TODO: Add a paywall
+  // TODO: Add paywall
 
   return (
     <CSVReader onUploadAccepted={onUpload}>
